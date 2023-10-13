@@ -60,5 +60,12 @@ export class AppComponent {
     this.city = "BVRM";
   }
 
+  // ngIf
+  show = true;
+
+  // ngFor
+  movies =['A','B','C'];
+
+  // ngSwitch
 
 }

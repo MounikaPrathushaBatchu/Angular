@@ -483,7 +483,8 @@
 
 <router-outlet></router-outlet>
 <app-header style="color: green; font-size: 2dvb; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></app-header>
-
+            
+                      <!-- Data Binding -->
 <!-- String Interpolation -->
   <img src="{{ path }}" alt="flag">
   <h4 class={{cName}}>Learn</h4>
@@ -520,3 +521,16 @@
   <label>City : </label><input type="text" [(ngModel)]="city">
   <p>{{city}}</p>
   <button (click)="updateCity()">Update City</button>
+
+                          <!-- Directives -->
+<!-- ngIf -->
+  <p *ngIf="show">pagraph using NgIf</p>
+
+<!-- ngFor -->
+  <table>
+    <tr *ngFor="let m of movies">
+      <td>{{m}}</td>
+    </tr>
+  </table>
+<!-- ngSwitch -->
+  
