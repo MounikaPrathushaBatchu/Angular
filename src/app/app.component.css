@@ -1,0 +1,15 @@
+.special {
+    border: 2px solid rgb(243, 122, 142);
+}
+.test {
+    background-color: rgb(85, 70, 150);
+    color: pink;
+}
+.active {
+    background-color: rgb(238, 166, 72);
+    color:rgb(226, 60, 60);
+}
+.inactive {
+    background-color: aquamarine;
+    color: rgb(55, 107, 3);
+}
