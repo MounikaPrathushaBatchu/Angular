@@ -1,10 +1,12 @@
 <!-- <p>header works!</p>
 <p><b>Child Component</b></p> -->
 
-<p>{{childTitle}}</p>
+<!-- <p>{{childTitle}}</p>
 <p>{{d1}}</p>
 <div *ngFor="let n of myNumbers">{{n}}</div>
 
 <button (click)="passToParent()">Send</button>
 <input type="text" (input)="updateMessage($event)">
-<div>ChildInput : {{ message }}</div>
+<div>ChildInput : {{ message }}</div> -->
+
+<input type="text" [(ngModel)]="message">
