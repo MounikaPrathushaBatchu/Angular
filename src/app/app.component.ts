@@ -114,4 +114,13 @@ export class AppComponent {
   dob = new Date();
   decimalNumber = 0.68;
 
+  wish = 'Good Morning!';
+  person = {
+    "id" : "1",
+    "name" : "Adam",
+    "address" : "US",
+    "mobile" : 123,
+    "gender" : 'f'
+  };
+
 }
