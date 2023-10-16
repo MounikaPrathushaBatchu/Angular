@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +11,15 @@ export class HeaderComponent {
   @Input() "d1" : string;
   @Input() "myNumbers" : any;
 
-  constructor(){ }
+  @Output() "cust" = new EventEmitter();
+  message = "passed to parent"
+  passToParent() {
+    this.cust.emit(this.message);
+  }
+  updateMessage(e : any) {
+    this.message = e.target.value;
+  }
+
+  constructor() {}
 
 }

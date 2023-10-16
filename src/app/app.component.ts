@@ -133,4 +133,9 @@ export class AppComponent {
 
   data1 = "this is app component data variable";
 
+  cData = "";
+  updateCData(e : any) {
+    this.cData = e;
+  }
+
 }
