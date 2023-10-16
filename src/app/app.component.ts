@@ -69,6 +69,39 @@ export class AppComponent {
 
   // ngFor
   movies =['A','B','C'];
+  nums = [1,2,3,4,5,6,7,8,9,10];
+  students = [
+    {
+      "id" : "1",
+      "name" : "Adam",
+      "address" : "US",
+      "mobile" : 123
+    },
+    {
+      "id" : "2",
+      "name" : "Stella",
+      "address" : "UK",
+      "mobile" : 456
+    },
+    {
+      "id" : "3",
+      "name" : "Zoya",
+      "address" : "USA",
+      "mobile" : 789
+    },
+    {
+      "id" : "4",
+      "name" : "Ziya",
+      "address" : "HYD",
+      "mobile" : 159
+    },
+    {
+      "id" : "5",
+      "name" : "John",
+      "address" : "UK",
+      "mobile" : 357
+    }
+  ]
 
   // ngSwitch
 

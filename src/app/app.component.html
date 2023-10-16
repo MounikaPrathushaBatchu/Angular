@@ -547,11 +547,48 @@
   <div #sample>{{data}}checking</div> -->
 
 <!-- ngFor -->
-  <!-- <table border="1">
+  <p>NgFor</p>
+  <table border="1">
     <tr *ngFor="let m of movies">
       <td>{{m}}</td>
     </tr>
-  </table> -->
+  </table>
+
+  <p *ngFor="let n of nums;index as i">paragraph {{n}}    index: {{i}}</p>
+  <!-- presention above paragraph data in table also using some other variables like first, last, even, odd -->
+  <table border="1">
+    <tr>
+      <td><b>Data</b></td>
+      <td><b>Index</b></td>
+      <td><b>First</b></td>
+      <td><b>Last</b></td>
+      <td><b>Even</b></td>
+      <td><b>Odd</b></td>
+    </tr>
+    <tr *ngFor="let n of nums;index as i;first as f;last as l;even as e;odd as o">
+      <td>paragraph {{n}}</td>
+      <td>{{i}}</td>
+      <td>{{f}}</td>
+      <td>{{l}}</td>
+      <td>{{e}}</td>
+      <td>{{o}}</td>
+    </tr>
+  </table>
+  <br>
+  <table border="1">
+    <tr>
+      <td><b>ID</b></td>
+      <td><b>Name</b></td>
+      <td><b>Address</b></td>
+      <td><b>Mobile</b></td>
+    </tr>
+    <tr *ngFor="let s of students">
+      <td>{{s.id}}</td>
+      <td>{{s.name}}</td>
+      <td>{{s.address}}</td>
+      <td>{{s.mobile}}</td>
+    </tr>
+  </table>
   
 <!-- ngSwitch -->
   
