@@ -618,6 +618,15 @@
   <button (click)="updateEmail(e.value)">Update</button>
   <p>{{email}}</p>
 
-  <div>{{parent}}</div>
-  <app-header [childTitle]="cTitle" [d1]="data1" [myNumbers]="nums"></app-header>
-  
+  <!-- parent to child : @Input decorator -->
+  <!-- <div>{{parent}}</div>
+  <app-header [childTitle]="cTitle" [d1]="data1" [myNumbers]="nums" (cust)="cData = $event"></app-header>
+  <div> Parent Component : {{cData}}</div> -->
+
+  <!-- child to parent : @Output decorator -->
+  <div> Parent Component : {{cData}}</div>
+  <!-- <app-header (cust)="cData = $event"></app-header> -->
+  <app-header (cust)="updateCData($event)"></app-header>
+
+  <!-- child to parent : Template Reference Variable -->
+  <!-- <app-header></app-header> -->
