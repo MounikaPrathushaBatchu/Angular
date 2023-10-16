@@ -482,7 +482,7 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <router-outlet></router-outlet>
-<app-header style="color: green; font-size: 2dvb; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></app-header>
+<app-header style="color: green; font-size: 5dvb; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></app-header>
             
                       <!-- Data Binding -->
 <!-- String Interpolation -->
@@ -500,7 +500,7 @@
   <!-- the below 2 lines are representing the same functionality -->
   <p [class]="{special:apply,active:isActive}">paragraph 2</p>
   <p [class]="['special','active']">paragraph 3</p>
-  <!-- double quotes are optional in the below line -->
+  <!-- double quotes for "apply" are optional in the below line -->
   <p [class.special]="apply">paragraph 4</p>
 
 <!-- Style Binding -->
@@ -526,11 +526,30 @@
 <!-- ngIf -->
   <p *ngIf="show">pagraph using NgIf</p>
 
+  <p *ngIf="!data">loading...</p>
+  <div *ngIf="data">{{data}}</div>
+  <!-- instead of above two lines of code we can write the below using "if else" condition -->
+  <!-- below 2 types of procedure is correct but, when 'data' variable is empty in the 2nd procedure(commented)
+     the text 'checking' is displayed. So, at that time we didn't meet our requirement better to use 1st
+     Procedure and use <ng-template> tag for "if else" i.e., ngIf 
+  -->
+  <p *ngIf="!data; else sample">loading...</p>
+  <ng-template #sample>{{data}}</ng-template>
+
+  <!-- "if then else" example -->
+  <p *ngIf="!data; then load; else sample"></p>
+  <ng-template #load>loading...</ng-template>
+  <ng-template #sample>{{data}}</ng-template>
+
+  <!-- <p *ngIf="!data" else sample>loading...</p>
+  <div #sample>{{data}}checking</div> -->
+
 <!-- ngFor -->
-  <table>
+  <!-- <table border="1">
     <tr *ngFor="let m of movies">
       <td>{{m}}</td>
     </tr>
-  </table>
+  </table> -->
+  
 <!-- ngSwitch -->
   

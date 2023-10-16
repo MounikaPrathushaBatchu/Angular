@@ -63,6 +63,10 @@ export class AppComponent {
   // ngIf
   show = true;
 
+  // check ngIf with empty data variable
+  // data = "";
+  data = ['A','B','C','D','E'];
+
   // ngFor
   movies =['A','B','C'];
 
