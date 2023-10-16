@@ -104,5 +104,8 @@ export class AppComponent {
   ]
 
   // ngSwitch
+  a:number = 10;
+  b:number = 5;
+  op:string = "*";
 
 }

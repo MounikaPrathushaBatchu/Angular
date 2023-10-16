@@ -591,4 +591,14 @@
   </table>
   
 <!-- ngSwitch -->
+  <p><b>ngSwitch</b></p>
+  <input type="text" [(ngModel)]="op">
+  <div [ngSwitch]="op">
+    <div *ngSwitchCase="'+' ">{{a}} + {{b}} = {{a+b}}</div>
+    <div *ngSwitchCase="'-' ">{{a}} - {{b}} = {{a-b}}</div>
+    <div *ngSwitchCase="'*' ">{{a}} * {{b}} = {{a*b}}</div>
+    <div *ngSwitchCase="'/' ">{{a}} / {{b}} = {{a/b}}</div>
+    <div *ngSwitchCase="'%' ">{{a}} % {{b}} = {{a%b}}</div>
+    <div *ngSwitchDefault>Invalid</div>
+  </div>
   
