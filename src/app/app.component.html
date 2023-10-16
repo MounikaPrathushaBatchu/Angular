@@ -629,5 +629,10 @@
   <!-- <app-header (cust)="updateCData($event)"></app-header> -->
 
   <!-- child to parent : Template Reference Variable -->
-  <div>child to parent using Template Reference Variable : {{ child.message }}</div>
-  <app-header #child></app-header>
+  <!-- <div>child to parent using Template Reference Variable : {{ child.message }}</div>
+  <app-header #child></app-header> -->
+
+  <!-- child to parent : @ViewChild decorator -->
+  <app-header></app-header><br>
+  <button (click)="testing()">Click</button>
+  <p>{{ vData }}</p>
