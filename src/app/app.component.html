@@ -482,7 +482,7 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <router-outlet></router-outlet>
-<app-header style="color: green; font-size: 5dvb; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></app-header>
+<!-- <app-header style="color: green; font-size: 5dvb; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></app-header> -->
             
                       <!-- Data Binding -->
 <!-- String Interpolation -->
@@ -617,4 +617,7 @@
   Email : <input type="text" value="abc@gmail.com" #e>
   <button (click)="updateEmail(e.value)">Update</button>
   <p>{{email}}</p>
+
+  <div>{{parent}}</div>
+  <app-header [childTitle]="cTitle" [d1]="data1" [myNumbers]="nums"></app-header>
   
