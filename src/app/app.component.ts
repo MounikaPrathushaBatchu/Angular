@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -136,6 +137,12 @@ export class AppComponent {
   cData = "";
   updateCData(e : any) {
     this.cData = e;
+  }
+
+  @ViewChild(HeaderComponent) header : any;
+  vData = "";
+  testing() {
+    this.vData = this.header.passToParentt();
   }
 
 }
