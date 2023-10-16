@@ -602,3 +602,12 @@
     <div *ngSwitchDefault>Invalid</div>
   </div>
   
+<!-- Pipes -->
+  <p>{{ titleName | titlecase }}</p>
+  <p>{{ salary | currency : 'INR' }}</p>
+  <p>{{ students | json }}</p>
+  <p>{{ dob | date :'dd/MM/yyyy' }}</p>
+  <p>{{ decimalNumber | percent }}</p>
+  <p>{{ titleName | slice:12:19 }}</p>
+  <!-- Custom Pipes -->
+  

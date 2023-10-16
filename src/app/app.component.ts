@@ -108,4 +108,10 @@ export class AppComponent {
   b:number = 5;
   op:string = "*";
 
+  // Pipes
+  titleName : string = 'Angular NHYUGUY un ygyu';
+  salary = 1000;
+  dob = new Date();
+  decimalNumber = 0.68;
+
 }
