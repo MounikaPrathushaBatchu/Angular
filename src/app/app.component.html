@@ -612,3 +612,9 @@
   <!-- Custom Pipes -->
   <!-- <p>{{ wish | removeNumber}}</p> -->
   <p>{{person | removeNumber:wish}}</p>
+
+  <!-- Template Reference Variable -->
+  Email : <input type="text" value="abc@gmail.com" #e>
+  <button (click)="updateEmail(e.value)">Update</button>
+  <p>{{email}}</p>
+  

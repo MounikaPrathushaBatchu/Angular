@@ -123,4 +123,10 @@ export class AppComponent {
     "gender" : 'f'
   };
 
+  // Template Reference Variable
+  email="";
+  updateEmail(ip : string){
+    this.email = ip;
+  }
+
 }
