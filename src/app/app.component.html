@@ -529,9 +529,10 @@
   <p *ngIf="!data">loading...</p>
   <div *ngIf="data">{{data}}</div>
   <!-- instead of above two lines of code we can write the below using "if else" condition -->
-  <!-- below 2 types of procedure is correct but, when 'data' variable is empty in the 2nd procedure(commented)
-     the text 'checking' is displayed. So, at that time we didn't meet our requirement better to use 1st
-     Procedure and use <ng-template> tag for "if else" i.e., ngIf 
+  <!-- 
+    below 2 types of procedure is correct but, when 'data' variable is empty in the 2nd procedure
+    (commented, i.e., without <ng-template>) the text 'checking' is displayed. So, at that time we didn't 
+    meet our requirement better to use 1st Procedure and use <ng-template> tag for "if else" i.e., ngIf 
   -->
   <p *ngIf="!data; else sample">loading...</p>
   <ng-template #sample>{{data}}</ng-template>
@@ -541,6 +542,7 @@
   <ng-template #load>loading...</ng-template>
   <ng-template #sample>{{data}}</ng-template>
 
+  <!-- without <ng-template> -->
   <!-- <p *ngIf="!data" else sample>loading...</p>
   <div #sample>{{data}}checking</div> -->
 
