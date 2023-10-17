@@ -1,4 +1,4 @@
-import { Component, ViewChild,AfterViewInit } from '@angular/core';
+import { Component, ViewChild,AfterViewInit, ViewChildren } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 
 @Component({
@@ -148,6 +148,11 @@ export class AppComponent {
   }
 
   // DOM manipulations
+  @ViewChild('test') div:any;
+  changeDiv() {
+    console.log(this.div);
+    this.div.nativeElement.style.color = 'red';
+  }
   @ViewChild('t') d:any;
   ngAfterViewInit(){
     console.log(this.d);
@@ -155,10 +160,18 @@ export class AppComponent {
       console.log(this.d.nativeElement.value);
     }
   }
-  @ViewChild('test') div:any;
-  changeDiv() {
-    console.log(this.div);
-    this.div.nativeElement.style.color = 'red';
+  
+  // ViewChild Vs @ViewChildren
+  @ViewChild('para') para:any;
+  @ViewChildren('paragraph') paragraph:any;
+  childVsChildren() {
+    console.log(this.para);
+    console.log(this.paragraph);
+    console.log(this.paragraph._results[3].nativeElement.innerText);
+    console.log(this.para.nativeElement.innerText);
+    for(let p of this.paragraph){
+      console.log(p.nativeElement.innerText);
+    }
   }
 
 }

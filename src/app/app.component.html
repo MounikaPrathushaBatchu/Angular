@@ -642,3 +642,13 @@
     <div #test>DOM manipulations example</div>
     <button (click)="changeDiv()">Click</button><br>
     DOM manipulations example : <input type="text" #t>
+
+<!-- ViewChild Vs @ViewChildren -->
+    <p #para>Paragraph 1</p>
+    <p #para>Paragraph 2</p>
+
+    <p #paragraph>Paragraph 3</p>
+    <p #paragraph>Paragraph 4</p>
+    <p #paragraph>Paragraph 5</p>
+    <p #paragraph>Paragraph 6</p>
+    <button (click)="childVsChildren()">Click</button>
