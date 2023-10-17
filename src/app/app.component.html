@@ -618,19 +618,20 @@
   <button (click)="updateEmail(e.value)">Update</button>
   <p>{{email}}</p>
 
+                  <!-- Component Communication -->
   <!-- parent to child : @Input decorator -->
-  <!-- <div>{{parent}}</div>
+  <div>{{parent}}</div>
   <app-header [childTitle]="cTitle" [d1]="data1" [myNumbers]="nums"></app-header>
-  <div> Parent Component : {{cData}}</div> -->
+  <div> Parent Component : {{cData}}</div>
 
   <!-- child to parent : @Output decorator -->
-  <!-- <div> Parent Component : {{cData}}</div> -->
+  <div> Parent Component : {{cData}}</div>
   <!-- <app-header (cust)="cData = $event"></app-header> -->
-  <!-- <app-header (cust)="updateCData($event)"></app-header> -->
+  <app-header (cust)="updateCData($event)"></app-header>
 
   <!-- child to parent : Template Reference Variable -->
-  <!-- <div>child to parent using Template Reference Variable : {{ child.message }}</div>
-  <app-header #child></app-header> -->
+  <div>child to parent using Template Reference Variable : {{ child.message }}</div>
+  <app-header #child></app-header>
 
   <!-- child to parent : @ViewChild decorator -->
   <app-header></app-header><br>

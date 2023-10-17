@@ -129,6 +129,8 @@ export class AppComponent {
   updateEmail(ip : string){
     this.email = ip;
   }
+
+  // Component Communication
   parent = "app-root component";
   cTitle = "header component";
 
