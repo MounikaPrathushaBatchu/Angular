@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild,AfterViewInit } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 
 @Component({
@@ -145,6 +145,20 @@ export class AppComponent {
   vData = "";
   testing() {
     this.vData = this.header.passToParentt();
+  }
+
+  // DOM manipulations
+  @ViewChild('t') d:any;
+  ngAfterViewInit(){
+    console.log(this.d);
+    this.d.nativeElement.onkeyup = () => {
+      console.log(this.d.nativeElement.value);
+    }
+  }
+  @ViewChild('test') div:any;
+  changeDiv() {
+    console.log(this.div);
+    this.div.nativeElement.style.color = 'red';
   }
 
 }
